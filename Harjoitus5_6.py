@@ -1,4 +1,11 @@
+from itertools import accumulate
+nums = [1,2,3,4,5]
+result = list(accumulate(nums))
+print( result )
+
 #Tehtävä 5B
+from itertools import accumulate
+
 paiva = input("Syota viikonpaiva: ").strip().lower()
 
 match paiva:
@@ -58,3 +65,12 @@ for tuote in ostossetti:
 # katsotaan, löytyykö banaani listalta
 if "banaani" in ostossetti:
     print("Banaani on setissä")
+
+
+my_numbers = [1, 2,3,4,4,6,6,7,8,9]
+numbers_set = set( my_numbers )
+
+big_list = list(range(1,10000000)) # haku O(n)
+big_set = set(big_list)  # o(1)
+
+
