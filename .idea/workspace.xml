@@ -5,9 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d3820e24-470d-4ce5-9100-4b80bb445d0f" name="Changes" comment="Harjoitukset 1-4">
-      <change afterPath="$PROJECT_DIR$/Funktiot1.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/myMathPackage/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/myMathPackage/myMath.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/myMathPackage/myMathUtils.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Harjoitus5_6.py" beforeDir="false" afterPath="$PROJECT_DIR$/Harjoitus5_6.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Funktiot1.py" beforeDir="false" afterPath="$PROJECT_DIR$/Funktiot1.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,6 +60,11 @@
     "settings.editor.selected.configurable": "editor.preferences.fonts.default"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\torton\PycharmProjects\FebruaryTraining\myMathPackage" />
+    </key>
+  </component>
   <component name="RunManager" selected="Python.Funktiot1">
     <configuration name="Funktiot1" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="FebruaryTraining" />
@@ -215,7 +223,14 @@
       <option name="presentableId" value="LOCAL−00003" />
       <updated>1739274580243</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL−00004" summary="Harjoitukset 1-4">
+      <option name="closed" value="true" />
+      <created>1739279507422</created>
+      <option name="number" value="LOCAL−00004" />
+      <option name="presentableId" value="LOCAL−00004" />
+      <updated>1739279507422</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">

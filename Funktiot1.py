@@ -1,22 +1,26 @@
 # Funktiot ja globaali muuttuja
 x = 10
 
+
 def my_function():
-    x = 20 # paikallinen muuttuja, joka peittää globaalin samannimisen
-    print(x) # tulostuu 20
+    x = 20  # paikallinen muuttuja, joka peittää globaalin samannimisen
+    print(x)  # tulostuu 20
+
 
 def my_global_modifier_function():
-    global x # luodaan sisäinen viittaus globaaliin x:ään
+    global x  # luodaan sisäinen viittaus globaaliin x:ään
     x = 20
-    print( x )
+    print(x)
+
 
 my_function()
-print( x ) # tulostaa 10
+print(x)  # tulostaa 10
 my_global_modifier_function()
-print( x ) # tulostaa 20
+print(x)  # tulostaa 20
+
 
 # Funktioharjoitus 1
-def tervehdi( nimi, kellonaika = "päivä"):
+def tervehdi(nimi, kellonaika="päivä"):
     match kellonaika:
         case "aamu":
             tervehdys = "Hyvää huomenta"
@@ -29,10 +33,12 @@ def tervehdi( nimi, kellonaika = "päivä"):
 
     print(f"{tervehdys}, {nimi}")
 
+
 tervehdi("Ossi", "aamu")
 
+
 # Tehtävä 2: yksinkertaistettu verolaskuri. Palauttaa 3 arvoa Tuplena
-def laske_vero( ansiotulot, kuntavero=20.0):
+def laske_vero(ansiotulot, kuntavero=20.0):
     if ansiotulot <= 21200:
         vero = ansiotulot * 0.1264
     elif ansiotulot <= 31500:
@@ -51,5 +57,14 @@ def laske_vero( ansiotulot, kuntavero=20.0):
     nettotulot = ansiotulot - kokonaisvero
     return nettotulot, vero, kuntaveron_maara
 
+
 # testataan verolaskuria
 x, y, z = laske_vero(100000)
+
+
+def handle_person_data(**personData):
+    for key, value in personData.items():
+        print(f"{key} {value}")
+
+
+handle_person_data(nimi="Tony", puhelin="0401234567")
