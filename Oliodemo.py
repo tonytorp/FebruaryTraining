@@ -1,10 +1,15 @@
 
 
 class Person:
+    personCount = 0
     def __init__(self, name="tuntematon", age=0, phone="xxx"):
         self.__name = name # _Person__name
         self.__age = age
         self.__phone = phone
+
+    def __del__(self):
+        print(f"{self.__name} poistetaan muistista")
+
     def greet(self):
 
         print(f"Hei, olen {self.__name} ja olen {self.__age} vuotias")
@@ -59,6 +64,7 @@ x = Person("Pekka", 20)
 print(f"Henkilon nimi on {x.name}")
 x.age = -2
 print( f"Henkilon syntymavuosi on {x.birth_year}")
+del x
 
 # Legacy getter ja setter
 x.set_name("Kalle") # ei python -henkinen tapa asettaa
