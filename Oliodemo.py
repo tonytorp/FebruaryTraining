@@ -1,14 +1,18 @@
 
-
 class Person:
-    personCount = 0
+    # henkilöiden lukumäärä muistissa
+    _personCount = 0 # staattiset
     def __init__(self, name="tuntematon", age=0, phone="xxx"):
         self.__name = name # _Person__name
         self.__age = age
         self.__phone = phone
 
+        Person._personCount += 1
+
     def __del__(self):
+        # tämä tapahtuu kun viittausta olioon ei ole ja gc poistaa olion
         print(f"{self.__name} poistetaan muistista")
+        Person._personCount -= 1
 
     def greet(self):
 
@@ -45,7 +49,7 @@ class Person:
 
     @property
     def age(self):
-        return self.__name
+        return self.__age
 
     @age.setter
     def age(self, value):
@@ -54,27 +58,81 @@ class Person:
         else:
             print("Ika ei positiivinen")
 
+    @property
+    def phone(self):
+        return self.__phone
+
+    @phone.setter
+    def phone(self, value):
+         self.__phone = value
+
     # Computated property
     @property
     def birth_year(self):
         return 2025-self.__age
 
+    @staticmethod
+    def person_count():
+        return Person._personCount
 
-x = Person("Pekka", 20)
-print(f"Henkilon nimi on {x.name}")
-x.age = -2
-print( f"Henkilon syntymavuosi on {x.birth_year}")
-del x
+# periytyminen. Employee is-a Person
+# Employeella on nimi, ikä, puhelinnumero etc, mutta
+# lisäksi titteli ja palkka
+class Employee(Person):
+    def __init__(self, name="", age=0, phone="", title="", salary=0.0):
+        super().__init__(name, age, phone)
+        self.__title = title
+        self.__salary = salary
 
-# Legacy getter ja setter
-x.set_name("Kalle") # ei python -henkinen tapa asettaa
-x.set_age(-5)  # ei python -henkinen tapa asettaa
-print(f"Kallen nimi on {x.get_name()}")
+    # ylikirjoita greet ja __str__
+    def __str__(self):
+        return super().__str__() + f"titteli: {self.__title}, palkka: {self.__salary}"
+    # @property ja @salary.setter palkalle
+    @property
+    def salary(self):
+        return self.__salary
+
+    @salary.setter
+    def salary(self, value):
+        self.__salary = value
+
+    def greet(self):
+        print(f"Employeen {self.name} tervehdys..")
+        # override kantaluokan toteutus
+
+
+# Luo lista henkilöitä, johon lisäät sekä Person että Employee -olioita
+# Iteroi lista läpi ja kutsu jokaiselle greet() (dynaaminen sidonta)
+
+puhelinluettelo = [
+    Person( "Pekka", 20, "+3582222222"),
+    Employee("Kalle", 35,"+358226872", "Developer", 5000 ),
+    Person( "Ossi", 20, "+358223222"),
+    Employee( "Maija", 30, "+22222999", "Project manager", 5000)
+]
+
+# Haetaan kaikki alle 30 vuotiaat
+persons_under_30 = list(filter( lambda person: person.age < 25, puhelinluettelo))
+
+# moderni syntaksi
+persons_under_30_modern = [person for person in puhelinluettelo if person.age < 25]
+
+for p in persons_under_30_modern:
+    print(p)
+
+
+def find_phone_number( name ):
+    return next( (person.phone for person in puhelinluettelo if person.name == name), None)
+
+print(f"Pekan puhelinnumero on {find_phone_number("Pekka")}")
 
 
 
-x.name = "Jussi"
-x.age = 10
-print( x )
+
+
+
+
+
+
 
 

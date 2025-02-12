@@ -256,7 +256,14 @@
       <option name="presentableId" value="LOCAL−00008" />
       <updated>1739353748442</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL−00009" summary="Harjoitukset 1-4">
+      <option name="closed" value="true" />
+      <created>1739354046627</created>
+      <option name="number" value="LOCAL−00009" />
+      <option name="presentableId" value="LOCAL−00009" />
+      <updated>1739354046627</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
