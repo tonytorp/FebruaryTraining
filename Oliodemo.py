@@ -14,6 +14,17 @@ class Person:
         print(f"{self.__name} poistetaan muistista")
         Person._personCount -= 1
 
+    def __eq__(self, other):
+        if isinstance(other, Person):
+            return self.__name == other.__name and self.__age == other.__age
+        return False
+
+    # Järjestys nimen perusteella (ns. oletusjärjestys)
+    def __lt__(self, other):
+        if isinstance(other, Person):
+            return self.__name < other.__name
+        return False
+
     def greet(self):
 
         print(f"Hei, olen {self.__name} ja olen {self.__age} vuotias")
@@ -56,7 +67,7 @@ class Person:
         if value >= 0:
             self.__age = value
         else:
-            print("Ika ei positiivinen")
+            raise ValueError("Ikä ei voi olla < 0!")
 
     @property
     def phone(self):
@@ -87,6 +98,8 @@ class Employee(Person):
     # ylikirjoita greet ja __str__
     def __str__(self):
         return super().__str__() + f"titteli: {self.__title}, palkka: {self.__salary}"
+
+
     # @property ja @salary.setter palkalle
     @property
     def salary(self):
@@ -110,6 +123,20 @@ puhelinluettelo = [
     Person( "Ossi", 20, "+358223222"),
     Employee( "Maija", 30, "+22222999", "Project manager", 5000)
 ]
+puhelinluettelo.sort()
+
+print("Nimijärjestys")
+for p in puhelinluettelo:
+    print( p ) ## nimijärjestyksessä
+
+# oletuslajittelu _lt_ n mukaan
+puhelinluettelo.sort(key=lambda person : person.age)
+
+print("Käänteinen ikäjärjestys")
+for p in puhelinluettelo:
+    print( p )
+
+
 
 # Haetaan kaikki alle 30 vuotiaat
 persons_under_30 = list(filter( lambda person: person.age < 25, puhelinluettelo))
@@ -120,12 +147,21 @@ persons_under_30_modern = [person for person in puhelinluettelo if person.age < 
 for p in persons_under_30_modern:
     print(p)
 
-
 def find_phone_number( name ):
     return next( (person.phone for person in puhelinluettelo if person.name == name), None)
 
 print(f"Pekan puhelinnumero on {find_phone_number("Pekka")}")
 
+x = Person("Jussi", 30)
+y = Person("Jussi", 30)
+
+if x == y: # __eq__
+    print ("samat")
+else:
+    print ("erit")
+
+if x < y: # __lt__
+    print( "jussi aakkosissa ennen maijaa")
 
 
 
