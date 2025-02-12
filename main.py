@@ -1,5 +1,5 @@
-import myMathPackage as Math
-
+#import myMathPackage as Math
+from myMathPackage.myMath import add
 x = 10
 y = 20
-z = Math.add( x, y )
+z = add( x, y )

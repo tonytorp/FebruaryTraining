@@ -36,8 +36,19 @@ def tervehdi(nimi, kellonaika="päivä"):
 
 tervehdi("Ossi", "aamu")
 
+from functools import wraps
+
+def performance_analysis(func):
+    @wraps(func)
+    def wrapper(*args, **kwargs):
+        print("Os time: ")
+        result = func(*args, **kwargs)
+        print("Os time + 1")
+        return result
+    return wrapper
 
 # Tehtävä 2: yksinkertaistettu verolaskuri. Palauttaa 3 arvoa Tuplena
+@performance_analysis
 def laske_vero(ansiotulot, kuntavero=20.0):
     if ansiotulot <= 21200:
         vero = ansiotulot * 0.1264
