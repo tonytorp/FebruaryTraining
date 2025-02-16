@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d3820e24-470d-4ce5-9100-4b80bb445d0f" name="Changes" comment="Harjoitukset 1-4">
-      <change beforePath="$PROJECT_DIR$/Oliodemo.py" beforeDir="false" afterPath="$PROJECT_DIR$/Oliodemo.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,21 +22,21 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "tonytorp"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;tonytorp&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/tonytorp/FebruaryTraining.git",
-    "accountId": "9b5dd5ce-1d2d-45ba-a166-215e2a6c3276"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/tonytorp/FebruaryTraining.git&quot;,
+    &quot;accountId&quot;: &quot;9b5dd5ce-1d2d-45ba-a166-215e2a6c3276&quot;
   }
-}]]></component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 1
-}]]></component>
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 1
+}</component>
   <component name="ProjectId" id="2sszW0FUx30h4TRUcdgt5nyzzWQ" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -55,6 +55,7 @@
     "Python.Oliodemo.executor": "Run",
     "Python.firstScript.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "master",
     "settings.editor.selected.configurable": "editor.preferences.fonts.default"
   }
@@ -278,7 +279,14 @@
       <option name="presentableId" value="LOCAL−00011" />
       <updated>1739366813551</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL−00012" summary="Harjoitukset 1-4">
+      <option name="closed" value="true" />
+      <created>1739366824205</created>
+      <option name="number" value="LOCAL−00012" />
+      <option name="presentableId" value="LOCAL−00012" />
+      <updated>1739366824205</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
